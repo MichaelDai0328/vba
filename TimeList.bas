@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "TimeList"
 Function time_list(ByRef Arr, ByVal start_time, ByVal end_time)
 
     For i = LBound(Arr) To UBound(Arr)
@@ -66,20 +66,20 @@ Sub generate_table()
 
     Call time_list(day_list, day_start, day_end)
     
-    Call location_list(day_location, "Î÷Ğ¡ÃÅ", "Î÷¿ìËÙÍ¨µÀ")
+    Call location_list(day_location, "è¥¿å°é—¨", "è¥¿å¿«é€Ÿé€šé“")
     
     Call time_list(night_list, night_start, night_end)
     
-    Call location_list(night_location, "Î÷Ğ¡ÃÅ", "Î÷¿ìËÙÍ¨µÀ")
+    Call location_list(night_location, "è¥¿å°é—¨", "è¥¿å¿«é€Ÿé€šé“")
     
     For i = 0 To 30
         For j = 0 To 3
-            ActiveSheet.Cells(15 + j, 7 + i * 2) = "Î÷´óÃÅ"
+            ActiveSheet.Cells(15 + j, 7 + i * 2) = "è¥¿å¤§é—¨"
         Next j
     Next i
         
     For i = 0 To 30
-        ActiveSheet.Cells(21, 7 + i * 2) = "Î÷´óÃÅ"
+        ActiveSheet.Cells(21, 7 + i * 2) = "è¥¿å¤§é—¨"
     Next i
     
     Call print_list(day_list, 10, 4)
